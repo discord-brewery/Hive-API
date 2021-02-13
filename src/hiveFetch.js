@@ -1,28 +1,34 @@
 const fetch = require('node-fetch');
 const FetchError = require('./errors/FetchError');
 
-module.exports = async function redditFetch({ subreddit, allowNSFW, allowModPost, allowCrossPost, allowVideo }) {
+module.exports = async function redditFetch({
+    subreddit,
+    allowNSFW,
+    allowModPost,
+    allowCrossPost,
+    allowVideo
+}) {
     return new Promise((resolve, reject) => {
 
 
         if (!subreddit)
             return reject(new Error('Missing required argument "subreddit"'));
 
-       if (typeof(subreddit) !== 'string')
+        if (typeof (subreddit) !== 'string')
             return reject(new TypeError(`Expected type "string" but got "${typeof(subreddit)}"`));
 
-        if (allowNSFW && typeof(allowNSFW) !== 'boolean')
+        if (allowNSFW && typeof (allowNSFW) !== 'boolean')
             return reject(new TypeError(`Expected type "boolean" but got "${typeof(allowNSFW)}"`));
 
-  
-        if (allowModPost && typeof(allowModPost) !== 'boolean')
+
+        if (allowModPost && typeof (allowModPost) !== 'boolean')
             return reject(new TypeError(`Expected type "boolean" but got "${typeof(allowModPost)}"`));
 
-    
-        if (allowCrossPost && typeof(allowCrossPost) !== 'boolean')
+
+        if (allowCrossPost && typeof (allowCrossPost) !== 'boolean')
             return reject(new TypeError(`Expected type "boolean" but got "${typeof(allowCrossPost)}"`));
 
-        if (allowVideo && typeof(allowVideo) !== 'boolean')
+        if (allowVideo && typeof (allowVideo) !== 'boolean')
             return reject(new TypeError(`Expected type "boolean" but got "${typeof(allowVideo)}"`));
 
         const targetURL = `https://reddit.com/r/${subreddit}.json`;
