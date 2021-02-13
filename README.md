@@ -87,4 +87,6 @@ bla bla bla bla bla
 
 
 **Future updates**
-imgur api
+<ul>
+<li>imgur api</li>
+</ul>
