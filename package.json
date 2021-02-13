@@ -1,0 +1,26 @@
+{
+  "name": "bee-api",
+  "version": "1.0.7",
+  "description": "reddit api",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discord-brewery/Hive-API.git"
+  },
+  "keywords": [
+    "reddit",
+    "api"
+  ],
+  "author": "DaatUserName",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/discord-brewery/Hive-API/issues"
+  },
+  "homepage": "https://github.com/discord-brewery/Hive-API#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
